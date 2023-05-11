@@ -4,7 +4,7 @@ import java.util.Objects;
 
 public class PositionType extends JobField {
 
-//    private int id;
+    //    private int id;
 //    private static int nextId = 1;
 //    private String value;
 //
@@ -26,8 +26,9 @@ public class PositionType extends JobField {
     @Override
     public String toString() {
         return value;
-    };
+    }
 
+    ;
 
 
     // TODO: Add custom equals and hashCode methods. Consider two PositionType objects "equal" when
@@ -47,6 +48,14 @@ public class PositionType extends JobField {
     }
 
 
+    public String getValue() {
+        if (value == null || value.isEmpty()) {
+            return "Data not available";
+        }
+        return value;
+    }
+}
+
     // Getters and Setters:
 
 //    public int getId() {
@@ -61,4 +70,4 @@ public class PositionType extends JobField {
 //        this.value = value;
 //    }
 
-}
+
