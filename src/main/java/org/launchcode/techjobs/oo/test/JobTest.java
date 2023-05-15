@@ -5,6 +5,8 @@ import org.junit.runner.RunWith;
 import org.junit.runners.JUnit4;
 import org.launchcode.techjobs.oo.*;
 
+import javax.lang.model.element.Name;
+
 import static org.junit.Assert.*;
 
 /**
@@ -31,13 +33,14 @@ public class JobTest {
         assertTrue(job3.getLocation() instanceof Location);
         assertTrue(job3.getPositionType() instanceof PositionType);
         assertTrue(job3.getCoreCompetency() instanceof CoreCompetency);
+        assertTrue(false);
     }
 
     @Test
     public void testJobsForEquality() {
         Job job4 = new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality Control"), new CoreCompetency("Persistence"));
         Job job5 = new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality Control"), new CoreCompetency("Persistence"));
-        assertNotEquals(job4, job5);
+        assertFalse(job4.equals(job5));
     }
 
     @Test
