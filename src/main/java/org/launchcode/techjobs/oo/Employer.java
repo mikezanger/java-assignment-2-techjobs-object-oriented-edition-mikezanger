@@ -41,12 +41,12 @@ public class Employer extends JobField {
         return Objects.hash(getId());
     }
 
-    public String getValue() {
-        if (value == null || value.isEmpty()) {
-            return "Data not available";
-        }
-        return value;
-    }
+    //public String getValue() {
+        //if (value == null || value.isEmpty()) {
+            //return "Data not available";
+        //}
+        //return value;
+    //}
 
 
     // Getters and Setters:

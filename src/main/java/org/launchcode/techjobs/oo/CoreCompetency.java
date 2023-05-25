@@ -42,12 +42,12 @@ public class CoreCompetency extends JobField {
     }
 
 
-    public String getValue() {
-        if (value == null || value.isEmpty()) {
-            return "Data not available";
-        }
-        return value;
-    }
+    //public String getValue() {
+        //if (value == null || value.isEmpty()) {
+            //return "Data not available";
+        //}
+        //return value;
+
 
     // TODO: Use the "Generate" tool to add a getter and setter for the 'value' field but
     //  ONLY a getter for the 'id' field.

@@ -48,13 +48,13 @@ public class PositionType extends JobField {
     }
 
 
-    public String getValue() {
-        if (value == null || value.isEmpty()) {
-            return "Data not available";
+    //public String getValue() {
+        //if (value == null || value.isEmpty()) {
+            //return "Data not available";
         }
-        return value;
-    }
-}
+        //return value;
+
+
 
     // Getters and Setters:
 

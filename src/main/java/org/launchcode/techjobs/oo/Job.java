@@ -22,10 +22,11 @@ public class Job {
         id = nextId;
         nextId++;
     }
+
     public Job(String name, Employer employer, Location location, PositionType positionType, CoreCompetency coreCompetency) {
         this();
         this.name = name;
-        this.employer= employer;
+        this.employer = employer;
         this.location = location;
         this.positionType = positionType;
         this.coreCompetency = coreCompetency;
@@ -47,7 +48,6 @@ public class Job {
     public int hashCode() {
         return Objects.hash(getId());
     }
-
 
 
     // TODO: Add getters for each field EXCEPT nextId. Add setters for each field EXCEPT nextID
@@ -98,15 +98,23 @@ public class Job {
     }
 
 
-
     @Override
-    public String toString(){
-        return "\nID: " + id + "\n" +
-                "Name: " + name + "\n" +
-                "Employer: " + employer.getValue() + "\n" +
-                "Location: " + location.getValue() + "\n" +
-                "Position Type: " + positionType.getValue() + "\n" +
-                "Core Competency: " + coreCompetency.getValue() + "\n";
+    public String toString() {
+        if (employer.getValue() == null || employer.getValue().isEmpty()) {
+                return "Employer data not available";}
+            else if (location.getValue() == null || location.getValue().isEmpty()) {
+                return "Location data not available";}
+            else if (positionType.getValue() == null || positionType.getValue().isEmpty()) {
+                return "Position type data not available";}
+            else if (coreCompetency.getValue() == null || coreCompetency.getValue().isEmpty()) {
+                return "Core Competency data not available";
+            } else {
+                return "\nID: " + id + "\n" +
+                    "Name: " + name + "\n" +
+                    "Employer: " + employer.getValue() + "\n" +
+                    "Location: " + location.getValue() + "\n" +
+                    "Position Type: " + positionType.getValue() + "\n" +
+                    "Core Competency: " + coreCompetency.getValue() + "\n";
+        }
     }
 }
-
