@@ -100,21 +100,36 @@ public class Job {
 
     @Override
     public String toString() {
+        String employerValue;
         if (employer.getValue() == null || employer.getValue().isEmpty()) {
-                return "Employer data not available";}
-            else if (location.getValue() == null || location.getValue().isEmpty()) {
-                return "Location data not available";}
-            else if (positionType.getValue() == null || positionType.getValue().isEmpty()) {
-                return "Position type data not available";}
-            else if (coreCompetency.getValue() == null || coreCompetency.getValue().isEmpty()) {
-                return "Core Competency data not available";
-            } else {
-                return "\nID: " + id + "\n" +
-                    "Name: " + name + "\n" +
-                    "Employer: " + employer.getValue() + "\n" +
-                    "Location: " + location.getValue() + "\n" +
-                    "Position Type: " + positionType.getValue() + "\n" +
-                    "Core Competency: " + coreCompetency.getValue() + "\n";
+            employerValue = "Data not available";
+        } else {
+            employerValue = employer.getValue();
         }
+
+        String locationValue;
+        if (location.getValue() == null || location.getValue().isEmpty()) {
+            locationValue = "Data not available";
+        } else {
+            locationValue = location.getValue();
+        }
+        String positionTypeValue;
+        if (positionType.getValue() == null || positionType.getValue().isEmpty()) {
+            positionTypeValue = "Data not available";
+        } else {
+            positionTypeValue = positionType.getValue();
+        }
+        String coreCompetencyValue;
+        if (coreCompetency.getValue() == null || coreCompetency.getValue().isEmpty()) {
+            coreCompetencyValue = "Data not available";
+        } else {
+            coreCompetencyValue = coreCompetency.getValue();
+        }
+        return "\nID: " + id + "\n" +
+                "Name: " + name + "\n" +
+                "Employer: " + employerValue + "\n" +
+                "Location: " + locationValue + "\n" +
+                "Position Type: " + positionTypeValue + "\n" +
+                "Core Competency: " + coreCompetencyValue + "\n";
     }
 }
